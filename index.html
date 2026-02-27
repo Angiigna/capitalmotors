@@ -16,7 +16,6 @@
   </head>
 
   <body>
-
     <!-- header -->
     <header>
       <div class="logo">
@@ -36,6 +35,11 @@
       <button>
         <a href="#contact">Get in Touch</a>
       </button>
+      <div class="hamburger" id="hamburger">
+        <span></span>
+        <span></span>
+        <span></span>
+      </div>
     </header>
 
     <!-- hero -->
@@ -334,7 +338,12 @@
     </footer>
 
     <!-- WhatsApp Button  -->
-    <a href="https://wa.me/9847121256" target="_blank" class="whatsapp-btn" title="Chat with us on WhatsApp">
+    <a
+      href="https://wa.me/9847121256"
+      target="_blank"
+      class="whatsapp-btn"
+      title="Chat with us on WhatsApp"
+    >
       <i class="fab fa-whatsapp"></i>
     </a>
 
@@ -377,7 +386,13 @@
           form.reset();
         });
       });
-    </script>
 
+      const hamburger = document.getElementById("hamburger");
+      const nav = document.querySelector("nav");
+
+      hamburger.addEventListener("click", () => {
+        nav.classList.toggle("active");
+      });
+    </script>
   </body>
 </html>

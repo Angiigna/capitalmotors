@@ -647,3 +647,67 @@ footer a {
     flex-direction: column;
   }
 }
+
+/* Hide hamburger on desktop */
+.hamburger {
+  display: none;
+  flex-direction: column;
+  gap: 5px;
+  cursor: pointer;
+}
+
+.hamburger span {
+  width: 25px;
+  height: 3px;
+  background: var(--primary);
+  transition: 0.3s;
+}
+
+/* MOBILE STYLES */
+@media (max-width: 768px) {
+  header {
+    height: 70px;
+    padding: 0 5%;
+  }
+
+  .logo img {
+    width: 180px;
+  }
+
+  /* Hide nav initially */
+  nav {
+    position: absolute;
+    top: 70px;
+    left: 0;
+    width: 100%;
+    background: white;
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.05);
+    max-height: 0;
+    overflow: hidden;
+    transition: max-height 0.4s ease;
+  }
+
+  nav.active {
+    max-height: 300px;
+  }
+
+  .nav__links {
+    flex-direction: column;
+    gap: 20px;
+    padding: 20px 5%;
+  }
+
+  .nav__links li {
+    font-size: 16px;
+  }
+
+  /* Hide desktop button */
+  header button {
+    display: none;
+  }
+
+  /* Show hamburger */
+  .hamburger {
+    display: flex;
+  }
+}
