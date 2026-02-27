@@ -146,6 +146,7 @@ header button a {
   min-height: 85vh;
   padding: 120px 8%;
   background: url("hero1.jpg") center/cover no-repeat;
+  height: 90vh;
   color: var(--white);
 }
 
