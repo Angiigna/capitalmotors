@@ -254,68 +254,156 @@ header button a {
   box-shadow: 0 8px 25px rgba(0, 0, 0, 0.15);
 }
 
-/* services */
-.services {
+/* Stats Section Styling */
+.stats-section {
+  padding: 60px 8%;
   background: var(--white);
-  padding: 70px 8%;
-  text-align: center;
-  color: var(--primary-dark);
-  border-bottom: 1px solid rgba(5, 38, 89, 0.1);
+  margin-top: -40px; /* Pulls it closer to the about section */
+  position: relative;
+  z-index: 10;
 }
 
-.service-card {
-  background: var(--primary-ultra-light);
-  padding: 40px 35px;
-  border-radius: 16px;
-  border-top: 4px solid var(--primary);
-  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
+.stats-container {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  gap: 25px;
+  max-width: 1100px;
+  margin: 0 auto;
+}
+
+.stat-item {
+  background: #111827; /* Dark background from your inspo pic */
+  padding: 30px;
+  border-radius: 12px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  transition: transform 0.3s ease;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+}
+
+.stat-item:hover {
+  transform: translateY(-10px);
+}
+
+.stat-icon {
+  font-size: 32px;
+  color: var(--primary-light); /* Light blue accent */
+  margin-bottom: 15px;
+}
+
+.stat-content h3 {
+  font-size: 36px;
+  color: #ffffff;
+  margin-bottom: 5px;
+}
+
+.stat-content p {
+  color: #9ca3af; /* Muted gray text */
+  font-size: 14px;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+}
+
+/* SERVICES */
+.services {
+  background: var(--white);
+  padding: 90px 8%;
+  text-align: center;
+  border-bottom: 1px solid rgba(5, 38, 89, 0.1);
 }
 
 .services h2 {
   color: var(--primary);
   font-size: 42px;
-  margin-bottom: 40px;
+  margin-bottom: 60px;
 }
 
+/* GRID */
 .service-grid {
   display: grid;
   grid-template-columns: repeat(2, 1fr);
-  gap: 35px;
-  max-width: 1000px;
+  gap: 40px;
+  max-width: 1100px;
   margin: auto;
+}
+
+/* CARD */
+.service-card {
+  background: white;
+  border-radius: 18px;
+  overflow: hidden;
+  box-shadow: 0 8px 25px rgba(0, 0, 0, 0.08);
+  transition: all 0.4s ease;
+  text-align: left;
+}
+
+.service-card:hover {
+  transform: translateY(-8px);
+  box-shadow: 0 12px 35px rgba(0, 0, 0, 0.12);
+}
+
+/* IMAGE SECTION */
+.service-image {
+  position: relative;
+  aspect-ratio: 16 / 9;
+  overflow: hidden;
+}
+
+.service-image img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: 0.5s ease;
+}
+
+.service-card:hover .service-image img {
+  transform: scale(1.05);
+}
+
+/* ICON BADGE */
+.service-icon {
+  position: absolute;
+  bottom: 15px;
+  left: 20px;
+
+  width: 50px;
+  height: 50px;
+
+  background: var(--primary);
+  color: white;
+
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  font-size: 18px;
+  box-shadow: 0 6px 18px rgba(5, 38, 89, 0.35);
+  transition: 0.3s ease;
+}
+
+.service-card:hover .service-icon {
+  transform: scale(1.1);
+  background: var(--primary-dark);
+}
+
+/* CONTENT */
+.service-content {
+  padding: 40px 30px 35px 30px;
 }
 
 .service-card h3 {
   color: var(--primary);
   font-size: 22px;
-  margin-bottom: 12px;
+  margin-bottom: 15px;
 }
 
 .service-card p {
-  font-weight: normal;
-  line-height: 1.7;
   font-size: 15px;
+  line-height: 1.7;
   color: var(--primary-dark);
-}
-
-.service-icon {
-  width: 65px;
-  height: 65px;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  background: rgba(5, 38, 89, 0.1);
-  border-radius: 12px;
-  margin-bottom: 20px;
-  font-size: 26px;
-  color: var(--primary);
-  transition: 0.3s;
-}
-
-.service-card:hover .service-icon {
-  background: var(--primary-dark);
-  color: white;
-  transform: rotate(-5deg) scale(1.1);
 }
 
 /* map */
@@ -701,13 +789,18 @@ footer a {
     font-size: 16px;
   }
 
-  /* Hide desktop button */
   header button {
     display: none;
   }
 
-  /* Show hamburger */
   .hamburger {
     display: flex;
+  }
+}
+
+
+@media (max-width: 600px) {
+  .stats-container {
+    grid-template-columns: 1fr 1fr; /* 2x2 grid on mobile */
   }
 }
