@@ -21,7 +21,7 @@ html {
 body {
   background: var(--white);
   color: var(--primary);
-  padding-top: 90px;
+  padding-top: 85px;
   font-family: "Inter", sans-serif;
 }
 
@@ -47,7 +47,6 @@ header {
   padding: 0 8%;
   background: white;
   z-index: 9999;
-  border-bottom: 3px solid var(--primary);
   box-shadow: 0 4px 18px rgba(0, 0, 0, 0.08);
 }
 
@@ -89,10 +88,44 @@ header {
   color: var(--primary);
   font-weight: 400;
   font-size: 18px;
+  transform: scale(0.5);
+  text-decoration: none;
+  font-weight: 300;
+  transition: all 0.5s ease;
 }
 
-.nav__links a::after {
-  background: var(--primary-light);
+.nav__links a:hover {
+  color: var(--primary-light);
+  padding-bottom: 4px;
+  text-decoration: none;
+  font-family: "Poppins", sans-serif;
+  font-weight: 600;
+  transform: scale(1.2) translateY(-2px);
+  text-shadow: 0 4px 12px rgba(13, 71, 161, 0.2);
+}
+
+/* header button */
+header button {
+  background: var(--primary);
+  color: var(--white);
+  border: none;
+  padding: 12px 24px;
+  font-size: 16px;
+  font-weight: 500;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: all 0.7s ease;
+}
+
+header button:hover {
+  background: var(--primary-dark);
+  transform: translateY(-2px);
+  box-shadow: 0 6px 20px rgba(13, 71, 161, 0.3);
+}
+
+header button a {
+  color: var(--white);
+  text-decoration: none;
 }
 
 /* hero */
@@ -588,7 +621,7 @@ footer a {
 /* mobile responsiveness */
 @media (max-width: 768px) {
   .service-grid {
-    grid-template-columns: 1fr; 
+    grid-template-columns: 1fr;
   }
 }
 
