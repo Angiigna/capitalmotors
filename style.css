@@ -107,7 +107,7 @@ header {
 
 .nav__links a:hover {
   color: var(--primary-dark);
-  font-weight: 600;
+  font-weight: 400;
 }
 
 .nav__links a:hover::after {
