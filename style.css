@@ -145,7 +145,7 @@ header button a {
   align-items: center;
   min-height: 85vh;
   padding: 120px 8%;
-  background: url("heroimage.png") center/cover no-repeat;
+  background: url("hero1.jpg") center/cover no-repeat;
   color: var(--white);
 }
 
