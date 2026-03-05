@@ -1228,7 +1228,7 @@ footer a {
 
   .service-grid {
     grid-template-columns: 1fr;
-    row-gap: 45px;   /* increased space between cards */
+    row-gap: 60px;   
   }
 
   .services h2 {
