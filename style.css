@@ -1228,7 +1228,8 @@ footer a {
 
   .service-grid {
     grid-template-columns: 1fr;
-    row-gap: 60px;   
+    row-gap: 40px;   
+    width: 85%;
   }
 
   .services h2 {
@@ -1241,10 +1242,12 @@ footer a {
     flex-direction: column;
     align-items: center;
     gap: 30px;
+    box-shadow: none;
   }
 
   .about-images img:first-child,
   .about-images img:last-child {
+    box-shadow: none;
     position: relative;
     width: 100%;
     max-width: 95%;
