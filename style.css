@@ -1239,6 +1239,7 @@ footer a {
 
   .services h2 {
     font-size: 32px;
+    margin-bottom: 40px;
   }
 
   /* ABOUT */
@@ -1274,6 +1275,7 @@ footer a {
 
   .stats-section {
     padding-top: 60px;
+    padding-bottom: 0px;
   }
 
   
